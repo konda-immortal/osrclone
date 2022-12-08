@@ -1,0 +1,158 @@
+{
+	"Actor": {
+		"types": ["PC", "Foe"],
+		"templates": {
+			"background": {
+				"biography": "",
+				"hairColor": ""
+			},
+			"stats": {
+				"stamina": {
+					"value": 0,
+					"min": 0,
+					"max": 0
+				},
+				"luck": {
+					"value": 0,
+					"min": 0,
+					"max": 0
+				},
+				"soak": {
+					"value": 0
+				},
+				"encumbrance": {
+					"value": 0,
+					"max": 0
+				}
+			},
+			"skills": {
+				"skills": {
+					"Acrobatics": {
+						"value": 0,
+						"increases": 0
+					},
+					"Appraisal": {
+						"value": 0,
+						"increases": 0
+					},
+					"Athletics": {
+						"value": 0,
+						"increases": 0
+					},
+					"Climb": {
+						"value": 0,
+						"increases": 0
+					},
+					"Disguise": {
+						"value": 0,
+						"increases": 0
+					},
+					"Magic": {
+						"value": 0,
+						"increases": 0
+					},
+					"Mechanics": {
+						"value": 0,
+						"increases": 0
+					},
+					"Melee": {
+						"value": 0,
+						"increases": 0
+					},
+					"Perception": {
+						"value": 0,
+						"increases": 0
+					},
+					"Ranged": {
+						"value": 0,
+						"increases": 0
+					},
+					"Sneak": {
+						"value": 0,
+						"increases": 0
+					},
+					"Steal": {
+						"value": 0,
+						"increases": 0
+					},
+					"Swim": {
+						"value": 0,
+						"increases": 0
+					},
+				}
+			}
+		},
+		"PC": {
+				"templates": ["background", "stats", "attributes", "skills"]
+			},
+		"Foe": {
+				"templates": ["stats", "skills"]
+			},
+	},
+	"Item": {
+		"types": ["weapon", "armor", "gear", "resource", "perk"],
+		"templates": {
+			"core": {
+				"description": "",
+				"attributes": {}
+			},
+			"basic": {
+				"quantity": {
+					"value": 1,
+					"type": "Number",
+					"label": "Quantity"
+				},
+				"encumbrance": {
+					"value": 0,
+					"type": "Number",
+					"label": "Encumbrance"
+				}
+			},
+			"equippable": {
+				"value": true,
+				"type": "Boolean",
+				"equipped": false
+			}
+		},
+		"weapon": {
+			"templates": ["core", "basic", "equippable"],
+			"skill": {
+				"value": "Big Guns",
+				"type": "String",
+				"label": "Skill"
+			},
+			"damage": {
+				"value": "1d4+0",
+				"type": "",
+				"label": "Damage"
+			},
+			"range": {
+				"value": "Short",
+				"type": "String",
+				"label": "Range"
+			},
+			"critical multiplier": {
+				"value": 2,
+				"type": "Number",
+				"label": "Critical Multiplier"
+			}
+		},
+		"armor": {
+			"templates": ["core", "basic", "equippable"],
+			"soak": {
+				"value": 0,
+				"type": "Number",
+				"label": "Soak"
+			}
+		},
+		"gear": {
+			"templates": ["core", "basic"]
+		},
+		"resource": {
+			"templates": ["core", "basic"]
+		},
+		"perk": {
+			"templates": ["core"]
+		}
+	}
+}
